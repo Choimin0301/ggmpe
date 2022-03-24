@@ -1,0 +1,33 @@
+transform의 소문자로 할 시 자신의 transform을 로드할 수 있음
+Time.deltaTime = 프레임당 걸린 초이기 때문에 도합 1이라 상관 없음
+Input. = 입력 관련 기능 제공
+GetAxisRaw() = 유니티 설정된 단축기 제공
+horisontal = 왼쪽 or a = -1저장, 오른쪽 or d= +1저장
+Vertical = 아래쪽 or s = -1, 위쪽 or w = +1 저장
+
+rigidbody 2d = 2차원용 중력
+질량, 마찰력 중력 계수 등 조작 가능
+
+collider 2ed = 충돌 범위 정함
+offset = 충돌 중심, Size = 충돌 범위 크기 Radius = 충돌 반지름 크기
+edge collider = 자유모양
+Edge Radius = 충동설 두께, Points = 각 점의 위치
+pilygon collider 2d = 알아서 모양 맞춰주지만 연사 오래걸림
+capshule collider = 캡슐형, 주로 캐릭터에 사용
+composite collider = 박스와 폴리곤 콜라이더 합침
+
+충돌이 필요할 시 둘 다 콜라이더가 있어야하고 둘중 하나 이상이 리기드바디 필요
+충돌처리 법
+
+OnCollisionEnter2D() = 충돌하는 순간 1회 호출
+OnCollisionStay2D() = 충돌 매 프레임마다 호출
+OnCollisionExit2D() = 충돌이 끝나는 순간 1회 호출
+
+프리팹 사용 시 원본을 파일형태로 보관하고 복제를 생성 가능
+private GameObject(게임오브젝트로)  원본이름Prefab(프리팹 지정);
+하이락키 창에서 설정 가능
+Instantiate(불러올 것, new vector3값, Quaternion.identity);
+로 원하는 위치에 소환 가능
+
+Destroy(오브젝트 이름) 제거
+Destroy(오브젝트, 시간f) 시간이 지나면 제거
